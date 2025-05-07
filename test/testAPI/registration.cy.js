@@ -57,7 +57,7 @@ describe('User Registration API', () => {
     })
 
     it('User Registration with Existed Username', () => {
-        const testUserName = UserAPI.generateUserName()
+        const testUserName = UserAPI.generateRandomString()
         const user1 = {
             ...UserAPI.getUserData(),
             username: testUserName

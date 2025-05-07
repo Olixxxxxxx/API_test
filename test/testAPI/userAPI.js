@@ -1,17 +1,12 @@
 import { EndPoints } from "./endPoints.js"
+import { RandomHelper } from "./randomHelper.js";
 export class UserAPI {
-    static generateUserName() {
-        return `Olha${Math.round((Math.random() * 10000))}`
-    }
-    static generateUserEmail() {
-        return `Olha${Math.round((Math.random() * 10000))}@gmail.com`
-    }
 
     static getUserData() {
         return {
-            username: this.generateUserName(),
+            username: RandomHelper.generateRandomString(),
             password: "Olixxx77!",
-            email: this.generateUserEmail(),
+            email: RandomHelper.generateUserEmail(),
             firstName: 'Olha',
             lastName: "Beregowa",
             middleName: "Igorevna"
@@ -80,4 +75,4 @@ export class UserAPI {
         })
     }
 }
-exports.Helpers = UserAPI
+exports.UserAPI = UserAPI
